@@ -1,0 +1,12 @@
+.chat-divider {
+  margin: 0.5rem !important;
+}
+
+.msg-box .ant-input {
+  height:3rem;
+}
+
+.msg-box .ant-btn {
+  height:3rem;
+}
+

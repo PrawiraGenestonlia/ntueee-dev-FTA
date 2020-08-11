@@ -1,0 +1,66 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbarlg {
+  position: fixed;
+  top: 0;
+  width:100%;
+  max-width: 2000px;
+  display: block;
+  transition: top 0.3s;
+}
+
+#tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+
+.tab-bar a.active  span{
+  color: #0084ff !important;
+}
+
+
+.tab-bar .active .icon {
+  filter: invert(51%) sepia(61%) saturate(6378%) hue-rotate(193deg) brightness(98%) contrast(113%) !important;
+}
+
+.large-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.large-nav li {
+  float: right;
+}
+
+.large-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.large-nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.large-nav .active {
+  background-color: #0084ff !important;
+}
+
+.large-nav-logo {
+  float: left !important;
+}

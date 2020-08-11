@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="NTU EEE Freshman Transition Application" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>E3VIS</title>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+
+  <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon/favicon-16x16.png">
+  <link rel="manifest" href="%PUBLIC_URL%/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body ontouchstart="">
+  <div id="root-background"></div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root-wrapper">
+    <div id="root"></div>
+  </div>
+  <div class="loader"></div>
+</body>
+
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+  }
+
+  #root-background {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    /* background-color: #f1f1f1; */
+  }
+
+  #root-wrapper {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .loader {
+    position: absolute;
+    top: calc(50% - 4em);
+    left: calc(50% - 4em);
+    width: 6em;
+    height: 6em;
+    border: 1.1em solid rgba(0, 0, 0, 0.2);
+    border-left: 1.1em solid rgb(100, 146, 237);
+    border-radius: 50%;
+    animation: load8 1.1s infinite linear;
+    transition: opacity 0.3s;
+  }
+
+  .loader--hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes load8 {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+</html>

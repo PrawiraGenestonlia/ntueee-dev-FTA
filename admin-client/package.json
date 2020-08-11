@@ -1,0 +1,54 @@
+{
+  "name": "geeenesis",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://e3vis.x-dream.tech/admin",
+  "dependencies": {
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/daygrid": "^4.3.0",
+    "@fullcalendar/interaction": "^4.3.0",
+    "@fullcalendar/react": "^4.3.0",
+    "@fullcalendar/timegrid": "^4.3.0",
+    "@wojtekmaj/react-datetimerange-picker": "^2.3.0",
+    "autoprefixer": "^9.7.0",
+    "axios": "^0.19.0",
+    "cross-env": "^7.0.2",
+    "draft-js": "^0.11.1",
+    "ncp": "^2.0.0",
+    "papaparse": "^5.1.0",
+    "react": "^16.11.0",
+    "react-add-to-calendar": "^0.1.5",
+    "react-dom": "^16.11.0",
+    "react-draft-wysiwyg": "^1.13.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-transition-group": "^4.3.0",
+    "reactjs-popup": "^1.5.0",
+    "sweetalert2": "^8.18.6",
+    "sweetalert2-react-content": "^1.1.0",
+    "tailwindcss": "^1.1.3"
+  },
+  "scripts": {
+    "start": "cross-env PORT=3000 npm run tailwind:css && react-scripts start",
+    "build": "npm run tailwind:css && cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "postbuild": "ncp build ../api-express-service/admin-build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.config.js -o src/css/tailwind.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

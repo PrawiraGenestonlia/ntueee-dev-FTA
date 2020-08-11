@@ -1,0 +1,31 @@
+{
+  "name": "project-geeenesis",
+  "version": "0.0.1",
+  "description": "A NTU EEE project to improve freshman transition into University life | Prawira Genestonlia | All rights reserved",
+  "scripts": {
+    "start": "npm run start:admin & npm run start:user",
+    "start:admin": "cd admin-client && npm start",
+    "start:user": "cd user-client && npm start",
+    "build": "npm run build:admin && npm run build:user",
+    "build:admin": "cd admin-client && npm run build",
+    "build:user": "cd user-client && npm run build",
+    "install": "npm run install:admin & npm run install:user &npm run install:server ",
+    "install:admin": "cd admin-client && npm i",
+    "install:user": "cd user-client && npm i",
+    "install:server": "cd api-express-service && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "log:server": "tail -f ./server-api-endpoint/log/access.log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrawiraGenestonlia/PROJECT-GEEENESIS.git"
+  },
+  "keywords": [  ],
+  "author": "Prawira Genestonlia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrawiraGenestonlia/PROJECT-GEEENESIS/issues"
+  },
+  "homepage": "https://github.com/PrawiraGenestonlia/PROJECT-GEEENESIS#readme",
+  "dependencies": {}
+}
