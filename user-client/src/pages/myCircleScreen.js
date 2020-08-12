@@ -6,6 +6,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { SEARCH_PROFILE_URL } from '../router/constants.router';
 import TopDiv from '../components/topCover';
 import { THEME_COLOR } from '../enum';
+import Avatar from '../components/avatar';
 
 const { TabPane } = Tabs;
 const { Search } = Input;
@@ -52,13 +53,54 @@ export default () => {
     });
   }
 
-  const profileList = (profiles, role) => { //array
-    return (
-      <>
-        <p>{`<Proper List for ${role}/> //TODO`}</p>
-        <p className="break-words">{JSON.stringify(profiles)}</p>
+  const profileList = (profiles, role) => {
+    switch (role) {
+      case ROLE.MENTOR: return <>
+        <div className="flex flex-col">{profiles.map((v, index) => <div className="flex flex-row items-center my-2" key={index} onClick={() => { onSearch(v.mentor) }}>
+          <div className="ml-2">
+            <Avatar className="h-12 w-12" src={v['avatarUrl'].length ? v['avatarUrl'][0] : ''} />
+          </div>
+          <div className="ml-3 float-left">
+            <span className="text-base" style={{ color: THEME_COLOR['FONT'] }}>{v['name'].length ? v['name'][0] : v.mentor}</span>
+          </div>
+        </div>)}
+        </div>
       </>
-    )
+      case ROLE.STUDENT: return <>
+        <div className="flex flex-col">{profiles.map((v, index) => <div className="flex flex-row items-center my-2" key={index}>
+          <div className="ml-2">
+            <Avatar className="h-12 w-12" src={v['avatarUrl'].length ? v['avatarUrl'][0] : ''} />
+          </div>
+          <div className="ml-3 float-left">
+            <span className="text-base" style={{ color: THEME_COLOR['FONT'] }}>{v['name'].length ? v['name'][0] : v.student}</span>
+          </div>
+        </div>)}
+        </div>
+      </>
+      case ROLE.SB: return <>
+        <div className="flex flex-col">{profiles.map((v, index) => <div className="flex flex-row items-center my-2" key={index}>
+          <div className="ml-2">
+            <Avatar className="h-12 w-12" src={v['avatarUrl'].length ? v['avatarUrl'][0] : ''} />
+          </div>
+          <div className="ml-3 float-left">
+            <span className="text-base" style={{ color: THEME_COLOR['FONT'] }}>{v['name'].length ? v['name'][0] : v['senior buddy']}</span>
+          </div>
+        </div>)}
+        </div>
+      </>
+      case ROLE.JB: return <>
+        <div className="flex flex-col">{profiles.map((v, index) => <div className="flex flex-row items-center my-2" key={index}>
+          <div className="ml-2">
+            <Avatar className="h-12 w-12" src={v['avatarUrl'].length ? v['avatarUrl'][0] : ''} />
+          </div>
+          <div className="ml-3 float-left">
+            <span className="text-base" style={{ color: THEME_COLOR['FONT'] }}>{v['name'].length ? v['name'][0] : v.student}</span>
+          </div>
+        </div>)}
+        </div>
+      </>
+      default: return <></>
+    }
   }
 
   return (

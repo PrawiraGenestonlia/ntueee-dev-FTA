@@ -73,7 +73,7 @@ app.get('/admin/*', (req, res) => {
 app.get('/api/', async (req, res) => {
   //
   let response = {
-    "server": "geeenesis-api running at " + req['headers']['host'],
+    "server": "e3vis-api running at " + req['headers']['host'],
     "status": "alive and healthy",
     "server time": new Date().toLocaleDateString,
     "available routes": {}

@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/admin/static/css/main.f17ea98a.chunk.css",
-    "main.js": "/admin/static/js/main.e8decf51.chunk.js",
+    "main.js": "/admin/static/js/main.c81ee73b.chunk.js",
     "runtime-main.js": "/admin/static/js/runtime-main.c50a3dfd.js",
     "static/css/2.e31ebaae.chunk.css": "/admin/static/css/2.e31ebaae.chunk.css",
     "static/js/2.830afb1a.chunk.js": "/admin/static/js/2.830afb1a.chunk.js",
     "index.html": "/admin/index.html",
-    "precache-manifest.ec8a0514f8144a583311907aa300ca88.js": "/admin/precache-manifest.ec8a0514f8144a583311907aa300ca88.js",
+    "precache-manifest.e6a91bd8ffc4269af97aa1e9b9617f79.js": "/admin/precache-manifest.e6a91bd8ffc4269af97aa1e9b9617f79.js",
     "service-worker.js": "/admin/service-worker.js",
     "static/media/main.css": "/admin/static/media/Poppins-SemiBold.e63b93df.ttf",
     "static/media/bg-01.jpg": "/admin/static/media/bg-01.c92b2d76.jpg"
@@ -16,6 +16,6 @@
     "static/css/2.e31ebaae.chunk.css",
     "static/js/2.830afb1a.chunk.js",
     "static/css/main.f17ea98a.chunk.css",
-    "static/js/main.e8decf51.chunk.js"
+    "static/js/main.c81ee73b.chunk.js"
   ]
 }

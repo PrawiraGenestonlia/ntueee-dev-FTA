@@ -7,7 +7,7 @@ import { getChats, postChats } from '../api';
 import { THEME_COLOR } from '../enum';
 
 const { Search } = Input;
-const MESSAGE_REFRESH_INTERVAL_MS = 600;
+const MESSAGE_REFRESH_INTERVAL_MS = 1000;
 
 export default (props) => {
   const chatTargetId = props.match.params.target_id || '';
@@ -85,42 +85,44 @@ export default (props) => {
 
   return (
     <div className="chat-screen">
-      <div className="fixed h-8 w-full z-30" style={{ top: 0, right: 0, backgroundColor: THEME_COLOR['BACKGROUND_C'] }}></div>
-      <TopNavBar className="sticky" title={chatTargetName} back="Chats" action={showTab} style={{ top: '2rem' }} />
+      {/* <div className="fixed h-8 w-full z-30" style={{ top: 0, right: 0, backgroundColor: THEME_COLOR['BACKGROUND_C'] }}></div> */}
+      <TopNavBar className="sticky" title={chatTargetName} back="Chats" action={showTab} />
+      <div>
 
-      {
-        messagesLoaded ?
-          <>
-            <ChatFeed
-              messages={messages} // Boolean: list of message objects
-              isTyping={false} // Boolean: is the recipient typing
-              hasInputField={false} // Boolean: use our input, or use your own
-              showSenderName // show the name of the user who sent the message
-              bubbleStyles={{ chatbubble: { backgroundColor: THEME_COLOR.CHAT_BUBBLE } }}
-              bubblesCentered={false} />
-            <div className="m-4 text-white" ref={bottomRef}>‌‌ </div>
-          </>
-          :
-          <div className="flex w-full mt-48 justify-center">
-            <Spin size="large" />
-          </div>
-      }
+        {
+          messagesLoaded ?
+            <>
+              <ChatFeed
+                messages={messages} // Boolean: list of message objects
+                isTyping={false} // Boolean: is the recipient typing
+                hasInputField={false} // Boolean: use our input, or use your own
+                showSenderName // show the name of the user who sent the message
+                bubbleStyles={{ chatbubble: { backgroundColor: THEME_COLOR.CHAT_BUBBLE } }}
+                bubblesCentered={false} />
+              <div className="m-4 text-white" ref={bottomRef}>‌‌ </div>
+            </>
+            :
+            <div className="flex w-full mt-48 justify-center">
+              <Spin size="large" />
+            </div>
+        }
 
-      <div className="fixed w-full z-20 msg-box" style={{ left: '0px', bottom: '0', backgroundColor: THEME_COLOR['BACKGROUND_SECONDARY'] }}>
-        <Search
-          enterButton={<MessageOutlined />}
-          size="large"
-          value={chatInput}
-          onChange={(e) => {
-            localStorage.setItem(chatTargetId, e.target.value);
-            setChatInput(e.target.value);
-          }}
-          onPressEnter={sendMessage}
-          onSearch={sendMessage}
-          placeholder={"You are chatting with " + chatTargetName}
-          style={{ outline: 'none', height: '3rem' }}
-          ref={chatBoxRef}
-          loading={sendingMessage ? true : false} />
+        <div className="fixed w-full z-20 msg-box" style={{ left: '0px', bottom: '0', backgroundColor: THEME_COLOR['BACKGROUND_SECONDARY'] }}>
+          <Search
+            enterButton={<MessageOutlined />}
+            size="large"
+            value={chatInput}
+            onChange={(e) => {
+              localStorage.setItem(chatTargetId, e.target.value);
+              setChatInput(e.target.value);
+            }}
+            onPressEnter={sendMessage}
+            onSearch={sendMessage}
+            placeholder={"You are chatting with " + chatTargetName}
+            style={{ outline: 'none', height: '3rem' }}
+            ref={chatBoxRef}
+            loading={sendingMessage ? true : false} />
+        </div>
       </div>
     </div>
   );

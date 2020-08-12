@@ -104,7 +104,7 @@ export default () => {
       <div className="text-center">
         <Link to="/">
           <div className="flex h-16 text-2xl items-center justify-center">
-            <span className="text-white">Admin Logo</span>
+            <span className="text-white">E3VIS</span>
           </div>
         </Link>
       </div>

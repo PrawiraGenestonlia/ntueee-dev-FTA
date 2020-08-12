@@ -51,9 +51,8 @@ export default () => {
       {
         Object.keys(myProfile).length !== 0 ?
           <div className="flex flex-col z-20">
-            {/* <div>Home Header with LOGO</div> */}
             <div className="flex flex-row items-center justify-start">
-              <img className="h-32 w-32 border-2 border-solid rounded-full z-20" src={myProfile['myInfo']['avatarUrl'] || NTUEEE} alt="ntueee" />
+              <img className="h-32 w-32 border-2 border-solid rounded-full z-20" src={myProfile['myInfo']['avatarUrl'] || NTUEEE} alt="ntueee" style={{ objectFit: 'cover' }} />
               <div className="ml-4 flex flex-col items-start justify-start z-20">
                 <div className="z-20">Welcome back, </div>
                 <div className="text-bold text-2xl capitalize z-20">{myProfile['myInfo']['name']}!</div>

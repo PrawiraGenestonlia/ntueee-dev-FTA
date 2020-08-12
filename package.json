@@ -1,5 +1,5 @@
 {
-  "name": "project-geeenesis",
+  "name": "e3vis",
   "version": "0.0.1",
   "description": "A NTU EEE project to improve freshman transition into University life | Prawira Genestonlia | All rights reserved",
   "scripts": {
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrawiraGenestonlia/PROJECT-GEEENESIS.git"
+    "url": "https://github.com/PrawiraGenestonlia/ntueee-dev-FTA"
   },
   "keywords": [  ],
   "author": "Prawira Genestonlia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PrawiraGenestonlia/PROJECT-GEEENESIS/issues"
+    "url": "https://github.com/PrawiraGenestonlia/ntueee-dev-FTA/issues"
   },
-  "homepage": "https://github.com/PrawiraGenestonlia/PROJECT-GEEENESIS#readme",
+  "homepage": "https://github.com/PrawiraGenestonlia/ntueee-dev-FTA#readme",
   "dependencies": {}
 }

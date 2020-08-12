@@ -60,6 +60,7 @@ router.get('/get-my-profile', verifyToken, async (req, res) => {
           {
             $project: {
               avatarUrl: '$details.avatarUrl',
+              name: '$details.name',
               mentor: 1,
               student: 1
             }
@@ -80,6 +81,7 @@ router.get('/get-my-profile', verifyToken, async (req, res) => {
           {
             $project: {
               avatarUrl: '$details.avatarUrl',
+              name: '$details.name',
               mentor: 1,
               student: 1
             }
@@ -100,6 +102,7 @@ router.get('/get-my-profile', verifyToken, async (req, res) => {
           {
             $project: {
               avatarUrl: '$details.avatarUrl',
+              name: '$details.name',
               "senior buddy": 1,
               student: 1
             }
@@ -120,6 +123,7 @@ router.get('/get-my-profile', verifyToken, async (req, res) => {
           {
             $project: {
               avatarUrl: '$details.avatarUrl',
+              name: '$details.name',
               "senior buddy": 1,
               student: 1
             }

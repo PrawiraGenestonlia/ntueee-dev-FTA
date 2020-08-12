@@ -8,7 +8,8 @@ export default function withTracker(WrappedComponent, options = {}) {
       page,
       ...options
     });
-    ReactGA.pageview(page)
+
+    ReactGA.pageview(page);
   }
 
   const HOC = (props) => {

@@ -15,6 +15,7 @@ import {
   // SINGLE_CHAT_URL, SINGLE_CLUB_URL, SINGLE_PROFILE_URL
 } from '../router/constants.router';
 import { TYPE_OF_LAYOUT, THEME_COLOR } from '../enum';
+import E3VISLOGO from '../assets/e3vis/E3VIS-logo-light.png';
 import '../css/react-burger-menu.css';
 import '../css/large-screen-nav.css';
 import '../css/menu-table.css';
@@ -133,7 +134,7 @@ const LargeScreenNavBar = () => {
   return (
     <div className="large-nav">
       <ul>
-        <li className="large-nav-logo"><Link className="" to="/">Geeenesis Logo</Link></li>
+        <li className="large-nav-logo"><Link className="" to="/"><img className="h-12 w-12 inline p-1" alt="logo" src={E3VISLOGO} style={{ margin: '-16px', marginRight: '5px' }} />E3VIS</Link></li>
         <li><Link className="" to="" onClick={onClickLogOut}>Log out</Link></li>
         {navigatorReversed.map((n, i) => {
           return (

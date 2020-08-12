@@ -10,7 +10,7 @@ import './css/tailwind.css';
 // import 'antd/dist/antd.dark.css';
 
 import * as serviceWorker from './serviceWorker';
-import { useState } from 'react';
+import PwaPrompt from './components/pwaPrompt.js';
 
 // import SessionControl from './components/sessionControl';
 // SessionControl();
@@ -38,14 +38,8 @@ const ThemeSelector = ({ children }) => {
 }
 
 const ReactApp = ({ hideLoader }) => {
-  const [isAdded, setIsAdded] = useState(false);
-  useEffect(() => hideLoader(), [hideLoader]);
 
-  useEffect(() => {
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsAdded(true);
-    }
-  }, []);
+  useEffect(() => hideLoader(), [hideLoader]);
 
   // const handleScroll = () => {
   //   checkScroll("navbar", "navbarlg", '50px')
@@ -61,7 +55,9 @@ const ReactApp = ({ hideLoader }) => {
 
   return (
     <ThemeSelector>
-      {isAdded ? <App /> : <App />}
+      <PwaPrompt>
+        <App />
+      </PwaPrompt>
     </ThemeSelector>
   )
 }

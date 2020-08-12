@@ -74,7 +74,7 @@ export default () => {
           <CustomDivider />
           <div className="flex flex-row items-center">
             <img className="w-6 h-6" src={NavigationSVG} alt="navigation-icon" style={{ filter: THEME_COLOR['ICON_FILTER'] }} />
-            <div className="ml-2">Mobile Navigation (Feature Coming Soon...)</div>
+            <div className="ml-2">Navigation (Coming Soon...)</div>
             <div className="absolute" style={{ right: '0.3rem' }}>
               <Select defaultValue={localStorage.getItem('TYPE_OF_LAYOUT') || TYPE_OF_LAYOUT.BOTTOM_TAB} onChange={onChangeTypeOfLayout} disabled>
                 <Option value={TYPE_OF_LAYOUT.BOTTOM_TAB}>Tab Bar</Option>

@@ -11,6 +11,7 @@ import '@ant-design/compatible/assets/index.css';
 import { message, Button, Input, Modal } from 'antd';
 import { THEME_COLOR } from '../enum';
 import Background from '../assets/img/login-bg.jpg';
+import { useHistory } from 'react-router-dom';
 // import { FormProvider } from 'antd/lib/form/context';
 
 // const NTUEmailRegex = /^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(ntu.edu)\.sg$/;
@@ -43,6 +44,7 @@ const tailLayout = {
 };
 
 const LoginForm = (props) => {
+  const history = useHistory();
   const { getFieldDecorator, validateFields } = props.form;
   const [showModal, setShowModal] = useState(false);
   const [showLoading, setShowLoading] = useState(false);
@@ -70,7 +72,9 @@ const LoginForm = (props) => {
       if (!err) {
         login(values).then(res => {
           localStorage.setItem('auth-token', res);
-          window.location.reload();
+          const userNetworkName = values.email.substring(0, values.email.lastIndexOf("@"));
+          localStorage.setItem('user', userNetworkName);
+          history.push('/');
         }).catch(async err => {
           let messages = err ? (err.data ? err.data : JSON.stringify(err)) : JSON.stringify(err);
           message.error(messages, 5);
@@ -132,8 +136,8 @@ const LoginForm = (props) => {
 const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(LoginForm);
 
 export default () => {
-  const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  const h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  // const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  // const h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
   // backgroundImage: `url("https://picsum.photos/seed/${new Date().getTime()}/${w}/${h}")`
   return (
     <div className="flex flex-col w-screen h-screen" style={{ maxWidth: '2000px', backgroundImage: `url(${Background})`, backgroundSize: 'cover' }}>

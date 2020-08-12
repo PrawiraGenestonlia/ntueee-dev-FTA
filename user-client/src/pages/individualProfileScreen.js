@@ -43,46 +43,46 @@ export default (props) => {
             </p>
             {
               data["Biography"] ?
-                <p>
+                <div>
                   <h3 className="font-bold">Biography</h3>
                   <p>{data["Biography"].length ? data["Biography"][0] : null}</p>
-                </p>
+                </div>
                 : null
             }
             {
               data["Current Projects"] ?
-                <p>
+                <div>
                   <h3 className="font-bold">Current Projects</h3>
-                  <p>
+                  <div>
                     {data["Current Projects"].length ?
                       <ul className="list-disc ml-4">
                         {
-                          data["Current Projects"].map((cp) => {
-                            return <li>{cp}</li>
+                          data["Current Projects"].map((cp, index) => {
+                            return <li key={index}>{cp}</li>
                           })
                         }
                       </ul>
                       : null}
-                  </p>
-                </p>
+                  </div>
+                </div>
                 : null
             }
             {
               data["Selected Publications"] ?
-                <p>
+                <div>
                   <h3 className="font-bold">Selected Publications</h3>
-                  <p>
+                  <div>
                     {data["Selected Publications"].length ?
                       <ul className="list-disc ml-4">
                         {
-                          data["Selected Publications"].map((cp) => {
-                            return <li>{cp}</li>
+                          data["Selected Publications"].map((cp, index) => {
+                            return <li key={index}>{cp}</li>
                           })
                         }
                       </ul>
                       : null}
-                  </p>
-                </p>
+                  </div>
+                </div>
                 : null
             }
             <BottomDiv />

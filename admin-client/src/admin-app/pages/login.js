@@ -28,7 +28,7 @@ function Login() {
   return (
     <div className="flex flex-col items-center w-full h-screen mt-40">
       <div className="text-2xl text-blue-600 mb-16">
-        <font>Login to access geeenesis admin page</font>
+        <font>Login to access e3vis admin page</font>
       </div>
       <form className="w-full max-w-sm" autoComplete="on">
         <div className="flex items-center border-b border-b-2 border-blue-500 py-2">
