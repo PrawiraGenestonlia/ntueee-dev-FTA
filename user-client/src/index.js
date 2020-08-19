@@ -6,6 +6,7 @@ import { TYPE_OF_THEME } from './enum';
 import ReactGA from 'react-ga';
 import './index.css';
 import './css/tailwind.css';
+import './css/scrollbar.css';
 // import 'antd/dist/antd.css';
 // import 'antd/dist/antd.dark.css';
 
