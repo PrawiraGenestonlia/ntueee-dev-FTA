@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/admin/static/css/main.f17ea98a.chunk.css",
-    "main.js": "/admin/static/js/main.c81ee73b.chunk.js",
+    "main.css": "/admin/static/css/main.e29c8322.chunk.css",
+    "main.js": "/admin/static/js/main.6f9bffc3.chunk.js",
     "runtime-main.js": "/admin/static/js/runtime-main.c50a3dfd.js",
-    "static/css/2.e31ebaae.chunk.css": "/admin/static/css/2.e31ebaae.chunk.css",
-    "static/js/2.830afb1a.chunk.js": "/admin/static/js/2.830afb1a.chunk.js",
+    "static/css/2.9224d105.chunk.css": "/admin/static/css/2.9224d105.chunk.css",
+    "static/js/2.231e645e.chunk.js": "/admin/static/js/2.231e645e.chunk.js",
     "index.html": "/admin/index.html",
-    "precache-manifest.e6a91bd8ffc4269af97aa1e9b9617f79.js": "/admin/precache-manifest.e6a91bd8ffc4269af97aa1e9b9617f79.js",
+    "precache-manifest.373ad14bf48c7a7d4eeef19badaacbb4.js": "/admin/precache-manifest.373ad14bf48c7a7d4eeef19badaacbb4.js",
     "service-worker.js": "/admin/service-worker.js",
     "static/media/main.css": "/admin/static/media/Poppins-SemiBold.e63b93df.ttf",
     "static/media/bg-01.jpg": "/admin/static/media/bg-01.c92b2d76.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c50a3dfd.js",
-    "static/css/2.e31ebaae.chunk.css",
-    "static/js/2.830afb1a.chunk.js",
-    "static/css/main.f17ea98a.chunk.css",
-    "static/js/main.c81ee73b.chunk.js"
+    "static/css/2.9224d105.chunk.css",
+    "static/js/2.231e645e.chunk.js",
+    "static/css/main.e29c8322.chunk.css",
+    "static/js/main.6f9bffc3.chunk.js"
   ]
 }
