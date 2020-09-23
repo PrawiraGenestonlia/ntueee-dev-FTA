@@ -8,6 +8,26 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>E3VIS Admin</title>
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <script src="https://apis.google.com/js/client:platform.js"></script>
+  <script>
+    ;
+    (function (w, d, s, g, js, fjs) {
+      g = w.gapi || (w.gapi = {})
+      g.analytics = {
+        q: [],
+        ready: function (cb) {
+          this.q.push(cb)
+        }
+      }
+      js = d.createElement(s)
+      fjs = d.getElementsByTagName(s)[0]
+      js.src = "https://apis.google.com/js/platform.js"
+      fjs.parentNode.insertBefore(js, fjs)
+      js.onload = function () {
+        g.load("analytics")
+      }
+    })(window, document, "script")
+  </script>
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
   <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
   <link

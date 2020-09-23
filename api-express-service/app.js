@@ -55,7 +55,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use('/admin', express.static(path.join(__dirname, 'admin-build')));
 app.use('/main', express.static(path.join(__dirname, 'user-build')));
 app.use(compression());
